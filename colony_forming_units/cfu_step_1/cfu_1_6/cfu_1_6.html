@@ -30,13 +30,13 @@
         }
 
         .custom-button:hover {
-            background-color: red;
+            background-color: darkred;
         }
     </style>
 
 </head>
 
-<body>
+<body tabindex="-1" title="hf_no_number">
 
     <header class="mb-2 p-1 text-center">
         <div class="d-flex align-items-center">
@@ -99,14 +99,13 @@
             <img src="./images/serial dilution 2.png" class="img-fluid rounded" alt="Description of Photo" style="width: 300px;">
         </div>
 
-        
-
         <!-- Video Recording -->
         <div class="pt-3 text-center">
             <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput" hf-use-description="true" hf-show-text="true" hf-no-number="true" tabindex="0">
-            <label for="fileInput" class="custom-button" hf-command="RECORD VIDEO"><button>Record Video</button> </label>
+            <label for="fileInput" tabindex="0" title="Record Video" style="display: inline-block; padding: 15px 30px; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold;">
+                <button class="custom-button">Record Video</button>
+            </label>
         </div>
-
 
     </main>
 
@@ -147,4 +146,3 @@
 
 </body>
 </html>
-
