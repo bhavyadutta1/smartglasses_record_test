@@ -36,7 +36,7 @@
 
 </head>
 
-<body tabindex="-1" title="hf_no_number">
+<body>
 
     <header class="mb-2 p-1 text-center">
         <div class="d-flex align-items-center">
@@ -61,14 +61,10 @@
             <h4 class="display-5 fw-bold text-body-emphasis">Step 1.6: Make the next dilutions.</h4>
         </div>
 
-        
-
-        
-
         <!-- Video Recording -->
         <div class="pt-3 text-center">
             <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput" hf-use-description="true" hf-show-text="true" hf-no-number="true" tabindex="0">
-            <label for="fileInput" class="custom-button" tabindex="0">Record Video</label>
+            <label for="fileInput" class="custom-button" hf-command="RECORD VIDEO" tabindex="0">Record Video</label>
         </div>
 
     </main>
@@ -102,7 +98,7 @@
     <!-- Custom JS -->
     <script src="main.js"></script>
     <script>
-        document.getElementById('recordVideoLink').addEventListener('click', function() {
+        document.querySelector('.custom-button').addEventListener('click', function() {
             document.getElementById('fileInput').click();
         });
     </script>
