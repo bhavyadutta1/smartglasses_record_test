@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>Launch Camera on RealWear Navigator 500</h1>
-    <button id="launchCameraBtn">Launch Camera</button>
+    <button id="launchCameraBtn" class="wearhf">Launch Camera</button>
 
     <script>
         document.getElementById("launchCameraBtn").addEventListener("click", function() {
+            // Check if the device is RealWear and launch the camera
             if (navigator.userAgent.includes("RealWear")) {
-                // Use the RealWear-specific API to launch the camera
                 window.location.href = "realwear://camera?action=startvideo";
             } else {
                 alert("This feature is only available on RealWear devices.");
